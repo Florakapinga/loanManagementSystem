@@ -150,3 +150,8 @@ int main()
 
             lms.makePayment(index - 1, payment); // Adjusting for zero-based index
             break;
+        }
+        case 3:
+            lms.displayLoans();
+            break;
+        case 4:
