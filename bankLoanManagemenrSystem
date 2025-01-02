@@ -33,3 +33,10 @@ public:
             std::cout << "Payment made: $" << payment << "\nRemaining balance: $" << loanAmount << "\n";
         }
     }
+    void displayLoanInfo() const
+    {
+        std::cout << "Borrower Name: " << borrowerName << "\n";
+        std::cout << "Loan Amount: $" << std::fixed << std::setprecision(2) << loanAmount << "\n";
+        std::cout << "Interest Rate: " << interestRate * 100 << "%\n";
+        std::cout << "Payment Status: " << (isPaid ? "Paid Off" : "Outstanding") << "\n";
+    }
