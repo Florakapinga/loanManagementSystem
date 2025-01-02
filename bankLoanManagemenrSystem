@@ -91,3 +91,17 @@ public:
         return loans.size();
     }
 };
+int main()
+{
+    LoanManagementSystem lms;
+
+    int choice;
+
+    do
+    {
+        std::cout << "\n=== Bank Loan Management System ===\n";
+        std::cout << "1. Add Loan\n";
+        std::cout << "2. Make Payment\n";
+        std::cout << "3. Display Loans\n";
+        std::cout << "4. Exit\n";
+        std::cout << "Enter your choice: ";
