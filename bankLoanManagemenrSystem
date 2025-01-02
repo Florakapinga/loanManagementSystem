@@ -56,3 +56,8 @@ private:
     std::vector<Loan> loans;
 
 public:
+    void addLoan(const Loan &loan)
+    {
+        loans.push_back(loan);
+        std::cout << "Loan added successfully!\n";
+    }
