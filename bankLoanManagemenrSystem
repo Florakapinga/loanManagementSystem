@@ -105,3 +105,23 @@ int main()
         std::cout << "3. Display Loans\n";
         std::cout << "4. Exit\n";
         std::cout << "Enter your choice: ";
+        switch (choice)
+        {
+        case 1:
+        {
+            std::string name;
+            double amount, rate;
+
+            std::cin.ignore(); // Clear the input buffer
+            std::cout << "Enter borrower's name: ";
+            getline(std::cin, name); // Use getline to allow spaces in names
+
+            std::cout << "Enter loan amount: ";
+            std::cin >> amount;
+
+            std::cout << "Enter interest rate (as a decimal): ";
+            std::cin >> rate;
+
+            lms.addLoan(Loan(name, amount, rate));
+            break;
+        }
