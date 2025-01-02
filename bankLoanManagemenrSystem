@@ -13,3 +13,23 @@ private:
 public:
     Loan(std::string name, double amount, double rate)
         : borrowerName(name), loanAmount(amount), interestRate(rate), isPaid(false) {}
+    void makePayment(double payment)
+    {
+        if (isPaid)
+        {
+            std::cout << "Loan is already paid off!\n";
+            return;
+        }
+
+        if (payment >= loanAmount)
+        {
+            loanAmount = 0;
+            isPaid = true;
+            std::cout << "Loan paid off completely!\n";
+        }
+        else
+        {
+            loanAmount -= payment;
+            std::cout << "Payment made: $" << payment << "\nRemaining balance: $" << loanAmount << "\n";
+        }
+    }
