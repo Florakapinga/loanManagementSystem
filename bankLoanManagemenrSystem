@@ -86,3 +86,8 @@ public:
             loans[i].displayLoanInfo();
         }
     }
+    size_t getLoansCount() const
+    { // Added method to get the count of loans
+        return loans.size();
+    }
+};
