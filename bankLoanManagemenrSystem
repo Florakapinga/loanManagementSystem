@@ -136,3 +136,17 @@ int main()
             {          // Check if there are any loans
                 break; // No loans to process payments for
             }
+            std::cout << "\nEnter the loan index to make a payment: ";
+            std::cin >> index;
+
+            if (index < 1 || index > lms.getLoansCount())
+            { // Validate index
+                std::cout << "Invalid index!\n";
+                break;
+            }
+
+            std::cout << "Enter the payment amount: ";
+            std::cin >> payment;
+
+            lms.makePayment(index - 1, payment); // Adjusting for zero-based index
+            break;
