@@ -61,3 +61,14 @@ public:
         loans.push_back(loan);
         std::cout << "Loan added successfully!\n";
     }
+    void makePayment(int index, double payment)
+    {
+        if (index >= 0 && index < loans.size())
+        {
+            loans[index].makePayment(payment);
+        }
+        else
+        {
+            std::cout << "Invalid loan index!\n";
+        }
+    }
