@@ -50,3 +50,9 @@ public:
         return loanAmount;
     }
 };
+class LoanManagementSystem
+{
+private:
+    std::vector<Loan> loans;
+
+public:
