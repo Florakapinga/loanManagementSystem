@@ -2,3 +2,14 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+class Loan
+{
+private:
+    std::string borrowerName;
+    double loanAmount;
+    double interestRate;
+    bool isPaid;
+
+public:
+    Loan(std::string name, double amount, double rate)
+        : borrowerName(name), loanAmount(amount), interestRate(rate), isPaid(false) {}
