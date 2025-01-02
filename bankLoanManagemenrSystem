@@ -40,3 +40,13 @@ public:
         std::cout << "Interest Rate: " << interestRate * 100 << "%\n";
         std::cout << "Payment Status: " << (isPaid ? "Paid Off" : "Outstanding") << "\n";
     }
+    bool isLoanPaid() const
+    {
+        return isPaid;
+    }
+
+    double getRemainingBalance() const
+    {
+        return loanAmount;
+    }
+};
